@@ -1,4 +1,3 @@
-@Library("masterlibrary") _
 pipeline{
     agent{
         label "node"
