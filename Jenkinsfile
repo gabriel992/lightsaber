@@ -1,2 +1,2 @@
-@Library("default@master") _
+@Library("masterlibrary") _
 pipelinehello()
