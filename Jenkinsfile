@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                docker build -t mvn-app 
+                sh "docker build -t mvn-app" 
             }
         }
         // stage('Test') {
