@@ -2,16 +2,23 @@ pipeline {
     agent any
 
     stages {
-        stage('Checkout') {
+        stage('Build') {
             steps {
-                script{
-                    git url: 'https://github.com/gabriel992/library_my_groovy.git'
-                }
-                
+                echo 'Building..'
             }
         }
-        
+        stage('Test') {
+            steps {
+                echo 'Testing..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
     }
     
    
-}
+
+} 
