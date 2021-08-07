@@ -1,2 +1,2 @@
 @Library("default@master")
-pipelinehello.groovy()
+pipelinehello()
