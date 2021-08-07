@@ -4,29 +4,21 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                docker build -t mvn-app 
             }
         }
-        stage('Test') {
-            steps {
-                echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying....'
-            }
-        }
+        // stage('Test') {
+        //     steps {
+        //         echo 'Testing..'
+        //     }
+        // }
+        // stage('Deploy') {
+        //     steps {
+        //         echo 'Deploying....'
+        //     }
+        // }
     }
-    post {
-        success {
-            emailext(
-                subject: "${env.JOB_NAME} na build [${env.BUILD_NUMBER}] foi deployado com sucesso :D",
-                body: "Verifique a saída da console do Job ${env.JOB_NAME} em [${env.BUILD_URL}] ",
-                to: "tjrohweder@gmail.com"
-            )
-        }   
-    }
+    
    
 
 }  
